@@ -1,6 +1,5 @@
-[Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+## What is [Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) ?
 
+You can run it on [JSFiddle](https://jsfiddle.net/apv4qkn2/)
 
-[JSFiddle](https://jsfiddle.net/apv4qkn2/)
-
-[@OmerCD](https://github.com/omercd)
+Special Thanks to: [@OmerCD](https://github.com/omercd)
