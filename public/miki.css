@@ -15,13 +15,20 @@
   flex-wrap: wrap;
   zoom: 1.55;
   margin: 0 auto;
+  margin-top: -20px;
+  cursor: pointer;
 }
 .cell {
   width: 5px;
   height: 5px;
   border: 0.1px solid rgb(178, 178, 178);
+  cursor: pointer;
+}
+.no-pointer {
+  cursor: default;
 }
 .cell.selected {
+  transition: background-color 0.1s ease-in-out;
   background-color: rgb(222, 255, 56);
 }
 
@@ -44,6 +51,10 @@
 }
 .startButton:hover {
   background-color: rgb(38, 223, 149);
+}
+
+.startButton.stopButton {
+  background-color: rgb(161, 27, 27);
 }
 
 .infoContainer {

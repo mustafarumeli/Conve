@@ -1,0 +1,36 @@
+.range-wrap {
+  position: absolute;
+  left: 75px;
+  bottom: 10px;
+  width: calc(100vw - 160px);
+}
+.range {
+  width: 100%;
+}
+.bubble {
+  display: none;
+}
+.bubble.open {
+  display: block;
+  background: rgba(255, 0, 0, 1);
+  color: white;
+  padding: 4px 12px;
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-200%);
+}
+.bubble.open::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgb(255, 0, 0);
+  left: 50%;
+  bottom: 0px;
+  transform: translateY(50%) translateX(-5%) rotate(45deg);
+}
+
+body {
+  margin: 2rem;
+}
