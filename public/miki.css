@@ -1,19 +1,7 @@
 * {
   box-sizing: border-box;
 }
-html[data-theme="dark"] {
-  --background-color: rgb(47, 47, 47);
-  --blue: #1e90ff;
-  --white: #ffffff;
-  --buttonHeight: 40px;
-  --buttonWidth: 60px;
-  --containerHeight: 200px;
-  --bufferHeight: 20px;
-  --green: #28a745;
-  --yellow: rgb(218, 200, 79);
-  --orange: #ffc107;
-  --ppColor: #ffd918;
-}
+
 html[data-theme="light"] {
   --background-color: rgb(219, 219, 219);
   --blue: #1e90ff;
@@ -25,7 +13,6 @@ html[data-theme="light"] {
   --green: #28a745;
   --yellow: rgb(218, 200, 79);
   --orange: #ffc107;
-  --ppColor: #93928d;
 }
 body {
   background-color: var(--background-color);
@@ -134,7 +121,7 @@ body {
 }
 .ppButtonContainer {
   position: absolute;
-  border-color: var(--background-color);
+  border-color: var(--ppBackgroundColor);
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -146,6 +133,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--ppColor);
+  outline: 1.2px solid var(--ppBackgroundColor);
 }
 
 .play {
@@ -169,7 +157,7 @@ body {
 }
 
 .ppButtonContainer:hover {
-  background-color: var(--background-color);
+  background-color: var(--ppBackgroundColor);
   border-color: var(--ppColor);
-  outline: 2px solid var(--ppColor);
+  outline: none;
 }

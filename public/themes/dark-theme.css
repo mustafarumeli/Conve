@@ -1,0 +1,8 @@
+html[data-theme="dark"] {
+  --background-color: #2f2f2f;
+  --cellColor: #1e90ff;
+  --containerColor: #1e90ff;
+  --cellBorderColor: #1e90ff;
+  --ppColor: #2f2f2f;
+  --ppBackgroundColor: #ffa500;
+}
