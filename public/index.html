@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miki</title>
-    <link rel="stylesheet" href="miki.css"/>
-    <link rel="stylesheet" href="/bubble/bubble.css"/>
-</head>
-<body>
-<div class="container"></div>
-<button
-        id="startButton"
-        class="startButton"
-        type="button"
-        role="button"
-        data-type="start"
->
-    Start
-</button>
-<button
-        id="continueButton"
-        class="continueButton"
-        type="button"
-        role="button"
-        data-type="continue"
->
-    Continue
-</button>
-<div class="infoContainer">
-    <span>Generation</span>
-    <span id="generationCounter">0</span>
-    <span>Count</span>
-    <span id="aliveCounter">0</span>
-</div>
-<div class="range-wrap">
-    <input
+    <link rel="stylesheet" href="miki.css" />
+    <link rel="stylesheet" href="/bubble/bubble.css" />
+    <link rel="stylesheet" href="sidebar/sidebar.css" />
+  </head>
+  <body>
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+    <!-- Toggleable sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item" style="text-align: center">
+        <h2 style="color: white">OHM'S GAME OF LIFE</h2>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="navbar-item">
+          <button
+            id="startButton"
+            class="sideBarButton startButton"
+            type="button"
+            role="button"
+            data-type="start"
+          >
+            Start
+          </button>
+        </a>
+
+        <div class="infoContainer">
+          <div>Generation:</div>
+          <div id="generationCounter">0</div>
+          <div>Alive Cell Count:</div>
+          <div id="aliveCounter">0</div>
+        </div>
+        <button
+          id="continueButton"
+          class="sideBarButton continueButton"
+          type="button"
+          role="button"
+          data-type="continue"
+        >
+          Continue
+        </button>
+        <div class="importExportContainer">
+          <button
+            id="importButton"
+            class="importButton sideBarButton"
+            type="button"
+            role="button"
+          >
+            Import
+          </button>
+          <button
+            id="exportButton"
+            class="exportButton sideBarButton"
+            type="button"
+            role="button"
+          >
+            Export
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="wrap"></div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <div class="container"></div>
+
+    <div class="range-wrap">
+      <input
         id="historyRange"
         type="range"
         class="range"
         min="0"
         max="1"
         value="0"
-/>
-    <output class="bubble"></output>
-</div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="globals.js"></script>
-<script src="miki.js"></script>
-<script src="/bubble/bubble.js"></script>
+      />
+      <output class="bubble"></output>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="globals.js"></script>
+  <script src="miki.js"></script>
+  <script src="/bubble/bubble.js"></script>
+  <script src="sidebar/sidebar.js"></script>
+  <script src="importExportOperations.js"></script>
 </html>

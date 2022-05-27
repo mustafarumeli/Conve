@@ -1,102 +1,118 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --buttonHeight: 40px;
-    --buttonWidth: 60px;
-    --containerHeight: 200px;
-    --bufferHeight: 20px;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --buttonHeight: 40px;
+  --buttonWidth: 60px;
+  --containerHeight: 200px;
+  --bufferHeight: 20px;
+  --green: #28a745;
+  --yellow: rgb(218, 200, 79);
+  --orange: #ffc107;
 }
 
 .container {
-    width: 1000px;
-    height: 500px;
-    background-color: rgb(59, 59, 59);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    zoom: 1.55;
-    margin: -20px auto 0;
-    cursor: pointer;
+  width: 1000px;
+  height: 500px;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  zoom: 1.55;
+  margin: -20px auto 0;
+  cursor: pointer;
 }
 
 .cell {
-    width: 5px;
-    height: 5px;
-    border: 0.1px solid rgb(178, 178, 178);
-    cursor: pointer;
+  width: 5px;
+  height: 5px;
+  border: 0.1px solid rgb(178, 178, 178);
+  cursor: pointer;
 }
 
 .no-pointer {
-    cursor: default;
+  cursor: default;
 }
 
 .cell.selected {
-    transition: background-color 0.1s ease-in-out;
-    background-color: rgb(222, 255, 56);
+  transition: background-color 0.1s ease-in-out;
+  background-color: rgb(222, 255, 56);
 }
 
+.sideBarButton {
+  height: var(--buttonHeight);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 2.5%;
+  cursor: pointer;
+  width: 95%;
+}
+.sideBarButton:hover {
+  filter: brightness(0.9);
+}
 .startButton {
-    width: var(--buttonWidth);
-    height: var(--buttonHeight);
-    background-color: rgb(45, 255, 171);
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    font-weight: bold;
-    border: 0.5px solid rgb(29, 161, 108);
-    border-radius: 5px;
-    margin: 10px auto;
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-
-.startButton:hover {
-    background-color: rgb(38, 223, 149);
+  background-color: var(--green);
+  box-shadow: 0px 0px 2px var(--green);
 }
 
 .startButton.stopButton {
-    background-color: rgb(161, 27, 27);
+  background-color: rgb(161, 27, 27);
 }
-
-.infoContainer {
-    position: absolute;
-    top: calc(var(--bufferHeight) + var(--buttonHeight));
-    right: 5px;
-    width: calc(var(--bufferHeight) + var(--buttonHeight));
-    height: var(--containerHeight);
-    border: 1px solid rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.infoContainer span {
-    font-size: 13px;
-}
-
 .continueButton {
-    width: var(--buttonWidth);
-    height: var(--buttonHeight);
-    background-color: rgb(241, 219, 76);
-    color: rgb(255, 255, 255);
-    font-size: 11px;
-    font-weight: bold;
-    border: 0.5px solid rgb(29, 161, 108);
-    border-radius: 5px;
-    margin: 10px auto;
-    cursor: pointer;
-    position: absolute;
-    top: calc(var(--bufferHeight) + var(--buttonHeight) + var(--containerHeight));
-    right: 5px;
-    display: none;
+  background-color: var(--yellow);
+  box-shadow: 0px 0px 2px var(--yellow);
 }
 
 .continueButton.show {
-    display: block;
+  display: block;
+}
+
+.exportButton {
+  background-color: var(--blue);
+  box-shadow: 0px 0px 2px var(--blue);
+}
+
+.importButton {
+  background-color: var(--orange);
+  box-shadow: 0px 0px 2px var(--orange);
+}
+
+.infoContainer {
+  top: calc(var(--bufferHeight) + var(--buttonHeight));
+  width: calc(var(--bufferHeight) + var(--buttonHeight));
+  height: var(--containerHeight);
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+
+.infoContainer div {
+  font-size: 18px;
+  width: 70%;
+}
+.infoContainer div:nth-child(2n) {
+  color: red;
+  width: 25%;
+  align-self: flex-end;
+}
+
+.importExportContainer {
+  position: absolute;
+  width: 220px;
+  bottom: 0;
+}
+.importExportContainer button {
+  margin-bottom: 5px;
+  margin-top: 0px;
 }

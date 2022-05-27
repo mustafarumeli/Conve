@@ -7,8 +7,11 @@ let lastIteration = 0;
 const iterationMs = 500;
 
 const $continueButton = $("#continueButton");
-const $startButton = $('#startButton');
-const $historyRange = $('#historyRange');
-const $container = $('.container');
-const $generationCounter = $('#generationCounter');
-const $aliveCounter = $('#aliveCounter');
+const $startButton = $("#startButton");
+const $historyRange = $("#historyRange");
+const $container = $(".container");
+const $generationCounter = $("#generationCounter");
+const $aliveCounter = $("#aliveCounter");
+const $importButton = $("#importButton");
+const $exportButton = $("#exportButton");
+const EXTENSION_NAME = "yorga";
