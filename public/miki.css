@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
 }
-
-:root {
+html[data-theme="dark"] {
+  --background-color: rgb(47, 47, 47);
   --blue: #1e90ff;
   --white: #ffffff;
   --buttonHeight: 40px;
@@ -12,8 +12,24 @@
   --green: #28a745;
   --yellow: rgb(218, 200, 79);
   --orange: #ffc107;
+  --ppColor: #ffd918;
 }
-
+html[data-theme="light"] {
+  --background-color: rgb(219, 219, 219);
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --buttonHeight: 40px;
+  --buttonWidth: 60px;
+  --containerHeight: 200px;
+  --bufferHeight: 20px;
+  --green: #28a745;
+  --yellow: rgb(218, 200, 79);
+  --orange: #ffc107;
+  --ppColor: #93928d;
+}
+body {
+  background-color: var(--background-color);
+}
 .container {
   width: 1000px;
   height: 500px;
@@ -115,4 +131,45 @@
 .importExportContainer button {
   margin-bottom: 5px;
   margin-top: 0px;
+}
+.ppButtonContainer {
+  position: absolute;
+  border-color: var(--background-color);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  bottom: 7.4px;
+  cursor: pointer;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ppColor);
+}
+
+.play {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid;
+  border-left-color: inherit;
+  margin-left: 5px;
+}
+.pause {
+  width: 12px;
+  height: 20px;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 5px solid;
+  border-right: 5px solid;
+  border-left-color: inherit;
+  border-right-color: inherit;
+}
+
+.ppButtonContainer:hover {
+  background-color: var(--background-color);
+  border-color: var(--ppColor);
+  outline: 2px solid var(--ppColor);
 }

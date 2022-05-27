@@ -14,4 +14,6 @@ const $generationCounter = $("#generationCounter");
 const $aliveCounter = $("#aliveCounter");
 const $importButton = $("#importButton");
 const $exportButton = $("#exportButton");
+const $playButton = $("#playButton");
+
 const EXTENSION_NAME = "yorga";

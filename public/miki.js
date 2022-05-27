@@ -178,3 +178,24 @@ const setMap = (cellArray) => {
   });
   $aliveCounter.text(currentAliveCounter);
 };
+let interval = null;
+$playButton.click(() => {
+  if ($playButton.hasClass("play")) {
+    $playButton.removeClass("play");
+    $playButton.addClass("pause");
+    interval = setInterval(() => {
+      if ($historyRange.val() < $historyRange.attr("max")) {
+        setMap(historyArray[parseInt($historyRange.val()) + 1]);
+        $historyRange.val(parseInt($historyRange.val()) + 1);
+      } else {
+        clearInterval(interval);
+        $playButton.removeClass("pause");
+        $playButton.addClass("play");
+      }
+    }, iterationMs);
+  } else {
+    clearInterval(interval);
+    $playButton.removeClass("pause");
+    $playButton.addClass("play");
+  }
+});
