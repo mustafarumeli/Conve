@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/bubble/bubble.css" />
     <link rel="stylesheet" href="sidebar/sidebar.css" />
     <link rel="stylesheet" href="themes/dark-theme.css" />
+    <link rel="stylesheet" href="themes/light-theme.css" />
+    <link rel="stylesheet" href="switch/switch.css" />
   </head>
   <body>
     <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
@@ -17,6 +19,10 @@
     <div class="sidebar" id="sidebar">
       <div class="sidebar-item" style="text-align: center">
         <h2 style="color: white">OHM'S GAME OF LIFE</h2>
+        <label class="switch" title="Light Mode">
+          <input type="checkbox" title="Light Mode" id="modeSwitcher" checked />
+          <span class="slider round"> </span>
+        </label>
       </div>
 
       <nav class="sidebar-nav">
@@ -47,6 +53,7 @@
         >
           Continue
         </button>
+
         <div class="importExportContainer">
           <button
             id="importButton"
@@ -94,4 +101,5 @@
   <script src="/bubble/bubble.js"></script>
   <script src="sidebar/sidebar.js"></script>
   <script src="importExportOperations.js"></script>
+  <script src="switch/switch.js"></script>
 </html>

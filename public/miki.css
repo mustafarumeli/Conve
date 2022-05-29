@@ -2,25 +2,13 @@
   box-sizing: border-box;
 }
 
-html[data-theme="light"] {
-  --background-color: rgb(219, 219, 219);
-  --blue: #1e90ff;
-  --white: #ffffff;
-  --buttonHeight: 40px;
-  --buttonWidth: 60px;
-  --containerHeight: 200px;
-  --bufferHeight: 20px;
-  --green: #28a745;
-  --yellow: rgb(218, 200, 79);
-  --orange: #ffc107;
-}
 body {
   background-color: var(--background-color);
 }
 .container {
   width: 1000px;
   height: 500px;
-  background-color: rgb(59, 59, 59);
+  background-color: var(--containerColor);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -32,7 +20,7 @@ body {
 .cell {
   width: 5px;
   height: 5px;
-  border: 0.1px solid rgb(178, 178, 178);
+  border: 0.1px solid var(--cellBorderColor);
   cursor: pointer;
 }
 
@@ -42,12 +30,12 @@ body {
 
 .cell.selected {
   transition: background-color 0.1s ease-in-out;
-  background-color: rgb(222, 255, 56);
+  background-color: var(--cellSelectedColor);
 }
 
 .sideBarButton {
   height: var(--buttonHeight);
-  color: rgb(255, 255, 255);
+  color: var(--sideBarButtonColor);
   font-size: 12px;
   font-weight: bold;
   border: none;
@@ -65,7 +53,7 @@ body {
 }
 
 .startButton.stopButton {
-  background-color: rgb(161, 27, 27);
+  background-color: var(--red);
 }
 .continueButton {
   background-color: var(--yellow);
@@ -90,7 +78,6 @@ body {
   top: calc(var(--bufferHeight) + var(--buttonHeight));
   width: calc(var(--bufferHeight) + var(--buttonHeight));
   height: var(--containerHeight);
-  border: 1px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -105,7 +92,7 @@ body {
   width: 70%;
 }
 .infoContainer div:nth-child(2n) {
-  color: red;
+  color: var(--red);
   width: 25%;
   align-self: flex-end;
 }

@@ -1,0 +1,25 @@
+html[data-theme="light"] {
+  --background-color: #f6e3d4;
+  --containerColor: #bbdbf7;
+  --cellBorderColor: #64abe3;
+  --cellSelectedColor: #df8684;
+  --sideBarButtonColor: #ffffff;
+  --ppColor: #90c7d9;
+  --ppBackgroundColor: #f5f4e8;
+
+  --green: #28a745;
+  --red: #a11b1b;
+  --yellow: #dac84f;
+  --orange: #ffc107;
+  --blue: #1e90ff;
+
+  --sideBarTextColor: #ffffff99;
+  --sideBarBackgroundColor: #202020;
+
+  --sideBarToggleColor: #505050;
+  --sideBarToggleBackgroundColor: #ffffff;
+  --sideBarToggleActiveColor: #ffffff;
+  --sideBarToggleActiveBackgroundColor: #505050;
+
+  --rangeSliderRunnableTrackColor: #90c7d9;
+}

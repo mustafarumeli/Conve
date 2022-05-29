@@ -3,22 +3,6 @@ body {
   overflow-x: hidden;
 }
 
-html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #313131;
-  letter-spacing: -0.025rem;
-}
-
 .wrap {
   position: relative;
   width: 100%;
@@ -34,8 +18,8 @@ h6 {
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 0.875rem; /* 15px */
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #202020;
+  color: var(--sideBarTextColor);
+  background-color: var(--sideBarBackgroundColor);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -46,10 +30,7 @@ h6 {
 }
 
 /* Sidebar content */
-.sidebar a {
-  font-weight: normal;
-  color: #fff;
-}
+
 .sidebar-item {
   padding: 1rem;
 }
@@ -58,19 +39,15 @@ h6 {
 }
 
 /* Sidebar nav */
-.sidebar-nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 .sidebar-nav-item {
   display: block;
   padding: 0.5rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.1);
   border-color: transparent;
 }
 
@@ -96,8 +73,8 @@ a.sidebar-nav-item:focus {
   display: block;
   width: 2.2rem;
   padding: 0.5rem 0.65rem;
-  color: #505050;
-  background-color: #fff;
+  color: var(--sideBarToggleColor);
+  background-color: var(--sideBarToggleBackgroundColor);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -117,8 +94,8 @@ a.sidebar-nav-item:focus {
 
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #fff;
-  background-color: #505050;
+  color: var(--sideBarToggleActiveColor);
+  background-color: var(--sideBarToggleActiveBackgroundColor);
 }
 
 @media (min-width: 30.1em) {
